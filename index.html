@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>M-Tech</title>
-  <!-- Font Awesome bekötése (ingyenes ikon könyvtár) -->
+  <!-- Font Awesome bekötése -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 150px; /* lejjebb tolja az egészet */
+      background-color: #f9f9f9;
+    }
     .btn {
-      display: inline-block;
-      margin: 20px;
+      display: block;          /* minden gomb külön sorban */
+      margin: 20px auto;       /* középre igazítva */
       padding: 15px 30px;
       font-size: 18px;
       color: white;
       border-radius: 8px;
       text-decoration: none;
+      width: 250px;            /* fix szélesség, hogy egyforma legyen */
     }
     .btn i {
-      margin-right: 10px; /* ikon és szöveg közötti térköz */
+      margin-right: 10px;
     }
     .instagram { background-color: #E1306C; }
     .facebook { background-color: #1877F2; }
