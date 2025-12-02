@@ -3,47 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <title>M-Tech</title>
+  <!-- Font Awesome ikonok -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
+      margin: 0;
+      height: 100vh;               /* teljes képernyő magasság */
+      display: flex;
+      justify-content: center;     /* vízszintesen középre */
+      align-items: center;         /* függőlegesen középre */
       background-color: #f9f9f9;
+      text-align: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 500px;            /* laptopon ne legyen túl széles */
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 40px;
+      line-height: 1.4;
     }
     .btn {
-      display: block;
-      margin: 20px auto;
-      padding: 20px 40px;
-      font-size: 22px;
+      display: block;              /* egymás alatt */
+      width: 100%;                 /* teljes szélesség mobilon */
+      margin: 16px auto;
+      padding: 24px 32px;          /* nagyobb gomb */
+      font-size: 24px;             /* nagy betűméret */
       color: white;
       border-radius: 12px;
       text-decoration: none;
-      max-width: 400px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
     }
     .btn i {
       margin-right: 12px;
-      font-size: 26px;
+      font-size: 28px;             /* nagy ikon */
       vertical-align: middle;
     }
     .instagram { background-color: #E1306C; }
     .facebook  { background-color: #1877F2; }
     .tiktok    { background-color: #000000; }
+
+    /* Extra: nagyon keskeny mobilokon */
+    @media (max-width: 400px) {
+      h1 { font-size: 20px; }
+      .btn { font-size: 20px; padding: 20px; }
+      .btn i { font-size: 24px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Közösségi oldalaim és referencia munkáim<br>Koppints egy ikonra!</h1>
+  <div class="container">
+    <h1>Itt éred el a közösségi oldalaimat és a referencia munkáimat.<br>
+      Koppints egy ikonra!</h1>
 
-  <a href="https://www.instagram.com/mtechpecs" class="btn instagram" target="_blank">
-    <i class="fab fa-instagram"></i> Instagram fiókom
-  </a>
+    <a href="https://www.instagram.com/mtechpecs" class="btn instagram" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram fiókom
+    </a>
 
-  <a href="https://www.facebook.com/share/14KSK3BCMea/?mibextid=wwXIfr" class="btn facebook" target="_blank">
-    <i class="fab fa-facebook"></i> Facebook fiókom
-  </a>
+    <a href="https://www.facebook.com/share/14KSK3BCMea/?mibextid=wwXIfr" class="btn facebook" target="_blank">
+      <i class="fab fa-facebook"></i> Facebook fiókom
+    </a>
 
-  <a href="https://www.tiktok.com/@m.tech.1.9.9.6" class="btn tiktok" target="_blank">
-    <i class="fab fa-tiktok"></i> TikTok fiókom
-  </a>
+    <a href="https://www.tiktok.com/@m.tech.1.9.9.6" class="btn tiktok" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok fiókom
+    </a>
+  </div>
 </body>
 </html>
