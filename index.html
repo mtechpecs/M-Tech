@@ -7,6 +7,9 @@
   <!-- Font Awesome ikonok -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    * {
+      box-sizing: border-box; /* minden elemnél számolja bele a paddinget */
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -16,11 +19,13 @@
       align-items: center;
       background-color: #f9f9f9;
       text-align: center;
-      padding: 20px;               /* mobilon ne érjen szélhez */
+      padding: 20px;               /* belső margó mobilon */
     }
     .container {
       width: 100%;
       max-width: 500px;
+      margin: 0 auto;              /* középre helyezés */
+      padding: 0 16px;             /* extra belső margó */
     }
     h1 {
       font-size: 1.6rem;           /* reszponzív méret */
