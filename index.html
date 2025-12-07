@@ -2,6 +2,7 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- fontos mobilhoz -->
   <title>M-Tech</title>
   <!-- Font Awesome ikonok -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -9,41 +10,42 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      height: 100vh;               /* teljes képernyő magasság */
+      min-height: 100vh;           /* teljes képernyő */
       display: flex;
-      justify-content: center;     /* vízszintesen középre */
-      align-items: center;         /* függőlegesen középre */
+      justify-content: center;
+      align-items: center;
       background-color: #f9f9f9;
       text-align: center;
+      padding: 20px;               /* mobilon ne érjen szélhez */
     }
     .container {
       width: 100%;
-      max-width: 500px;            /* laptopon ne legyen túl széles */
-      padding: 0 20px;
+      max-width: 500px;
     }
     h1 {
-      font-size: 26px;
-      margin-bottom: 40px;
+      font-size: 1.6rem;           /* reszponzív méret */
+      margin-bottom: 30px;
       line-height: 1.4;
     }
     .btn {
-      display: block;              /* egymás alatt */
-      width: 100%;                 /* teljes szélesség mobilon */
-      margin: 16px auto;
-      padding: 24px 32px;          /* nagyobb gomb */
-      font-size: 24px;             /* nagy betűméret */
+      display: block;
+      width: 100%;
+      margin: 18px auto;
+      padding: 18px 24px;
+      font-size: 1.2rem;
       color: white;
       border-radius: 12px;
       text-decoration: none;
       transition: transform 0.2s ease, opacity 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* mobilon kiemelés */
     }
     .btn:hover {
       transform: scale(1.05);
       opacity: 0.9;
     }
     .btn i {
-      margin-right: 12px;
-      font-size: 28px;             /* nagy ikon */
+      margin-right: 10px;
+      font-size: 1.4rem;
       vertical-align: middle;
     }
     .instagram { background-color: #E1306C; }
@@ -52,9 +54,9 @@
 
     /* Extra: nagyon keskeny mobilokon */
     @media (max-width: 400px) {
-      h1 { font-size: 20px; }
-      .btn { font-size: 20px; padding: 20px; }
-      .btn i { font-size: 24px; }
+      h1 { font-size: 1.2rem; }
+      .btn { font-size: 1rem; padding: 16px; }
+      .btn i { font-size: 1.2rem; }
     }
   </style>
 </head>
